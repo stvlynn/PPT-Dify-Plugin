@@ -38,7 +38,13 @@ This plugin allows you to convert Markdown content into PowerPoint presentations
 
 - `markdown_content` (required): The Markdown content to be converted to a PowerPoint presentation
 - `title` (optional): The title of the presentation
-- `theme` (optional): The theme/design to use for the presentation
+- `theme` (optional): The theme/design to use for the presentation; default white template will be used if unprovided
+
+**Special Note – Custom theme & variable `theme` usage:**
+
+1. Create a folder named templates under `your_dify_src/docker/volumes/plugin_daemon/cwd/stvlynn/ppt-0.0.1@xxx/_assets`.
+2. Place your template PowerPoint file (e.g., custom.pptx) inside the templates folder. Make sure the name of the variable `theme` name matches the file name (e.g., "custom").
+3. You may want to delete existing slides from your template, as the generated slides will be added to the file rather than overwriting it.
 
 ## Example Markdown
 
